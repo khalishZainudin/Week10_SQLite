@@ -24,13 +24,15 @@ public class MainActivity extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         androidx.appcompat.widget.Toolbar toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolbar);
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         listViewRecords = (ListView)findViewById(R.id.listViewRecords);
         listViewRecords.setOnItemClickListener(this);
-        FloatingActionButton fab = (FloatingActionButton)
-                findViewById(R.id.fabAdd);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabAdd);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
