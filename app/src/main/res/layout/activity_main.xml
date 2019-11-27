@@ -26,4 +26,21 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         app:srcCompat="@drawable/baseline_launch_black_18dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:srcCompat="@drawable/outline_delete_black_18dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        app:srcCompat="@drawable/outline_create_black_18dp" />
+
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

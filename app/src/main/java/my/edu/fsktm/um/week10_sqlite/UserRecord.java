@@ -4,6 +4,7 @@ public class UserRecord {
     private String phone;
     private String name;
     private String email;
+
     public String getPhone() {
         return phone;
     }

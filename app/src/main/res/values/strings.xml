@@ -6,7 +6,10 @@
     <string name="email">Email</string>
     <string name="phone">Phone</string>
     <string name="save">Save</string>
+    <string name="delete">Delete</string>
     <string name="cancel">Cancel</string>
+    <string name="nameDel">Enter a name to delete:</string>
+    <string name="nameUpdate">Enter a name to update:</string>
     <string name="error_phone">Please enter phone</string>
     <string name="error_name">Name please</string>
     <string name="error_email">Email please</string>

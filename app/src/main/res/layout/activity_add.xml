@@ -6,6 +6,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddActivity">
+
+    <TextView
+        android:id="@+id/TVdelName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:textSize="20sp"
+        android:text="Add new User"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginHorizontal="10dp"
+        />
+
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="0dp"
@@ -18,7 +33,7 @@
         android:inputType="textPersonName"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/TVdelName" />
     <EditText
         android:id="@+id/editTextPhone"
         android:layout_width="0dp"
@@ -56,7 +71,7 @@
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent" />
     <Button
-        android:id="@+id/buttonCancel"
+        android:id="@+id/BTNCancelAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

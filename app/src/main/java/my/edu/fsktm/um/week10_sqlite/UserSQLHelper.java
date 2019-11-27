@@ -50,9 +50,11 @@ public class UserSQLHelper extends SQLiteOpenHelper {
         values.put(UserContract.User.COLUMN_PHONE, userRecord.getPhone());
         values.put(UserContract.User.COLUMN_NAME, userRecord.getName());
         values.put(UserContract.User.COLUMN_EMAIL, userRecord.getEmail());
+
         //Insert a row
         SQLiteDatabase database = this.getWritableDatabase();
         database.insert(UserContract.User.TABLE_NAME, null, values);
+
         //Close database connection
         database.close();
     }
@@ -73,6 +75,27 @@ public class UserSQLHelper extends SQLiteOpenHelper {
             cursor.moveToNext();
         }
         return records;
+    }
+
+    //delete record
+    public int delete(String uname)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String[] whereArgs ={uname};
+
+        int count =db.delete(UserContract.User.TABLE_NAME ,UserContract.User.COLUMN_NAME+" = ?",whereArgs);
+        return  count;
+    }
+
+    //update name
+    public int updateName(String oldName , String newName)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(UserContract.User.COLUMN_NAME,newName);
+        String[] whereArgs= {oldName};
+        int count =db.update(UserContract.User.TABLE_NAME,contentValues, UserContract.User.COLUMN_NAME+" = ?",whereArgs );
+        return count;
     }
 
 

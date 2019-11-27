@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 import android.widget.Toolbar;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements
         listViewRecords = (ListView)findViewById(R.id.listViewRecords);
         listViewRecords.setOnItemClickListener(this);
 
+        //go to Add activity
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fabAdd);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +43,29 @@ public class MainActivity extends AppCompatActivity implements
                 startActivity(intent);
             }
         });
+
+        //go to Delete Activity
+        FloatingActionButton fabDel = (FloatingActionButton) findViewById(R.id.fabDel);
+        fabDel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),
+                        DeleteActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        //go to Update Activity
+        FloatingActionButton fabUpdate = (FloatingActionButton) findViewById(R.id.fabUpdate);
+        fabUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),
+                        UpdateActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -84,4 +109,10 @@ public class MainActivity extends AppCompatActivity implements
         //Link adapter to ListView
         listViewRecords.setAdapter(adapter);
     }
+
+
+
+
+
+
 }
